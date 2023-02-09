@@ -16,6 +16,10 @@ mvn spring-boot:run
 
 ## REST API
 
+### Swagger
+
+![Swagger](img/swagger.png)
+
 ### /v1/weather/daily/:address
 
 `GET` : Get daily weather
