@@ -10,14 +10,16 @@ public final class WeatherApiConstants {
 
     public static String WEATHER_API_KEY;
 
+    public final static String REGEXP_ADDRESS = "[a-zA-Z \\u0080-\\u9fff\\\\/\\-_.,]*";
+
 
     @Value("${weather.api.url}")
-    public void setApiUrl(String apiUrl){
+    public void setApiUrl(String apiUrl) {
         WeatherApiConstants.WEATHER_API_URL = apiUrl;
     }
 
     @Value("${weather.api.key}")
-    public void setApiKey(String apiKey){
+    public void setApiKey(String apiKey) {
         WeatherApiConstants.WEATHER_API_KEY = apiKey;
     }
 
