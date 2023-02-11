@@ -14,10 +14,10 @@ import java.util.Date;
 public class WeatherExceptionHandler {
 
     @ExceptionHandler(HttpClientErrorException.class)
-    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     public ErrorMessage addressHandler(HttpClientErrorException exception, WebRequest request) {
         return new ErrorMessage(
-                HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                HttpStatus.BAD_REQUEST.value(),
                 new Date(),
                 exception.getMessage(),
                 request.getDescription(false)
