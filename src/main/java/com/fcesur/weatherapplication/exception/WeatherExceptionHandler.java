@@ -27,7 +27,7 @@ public class WeatherExceptionHandler {
 
     @ExceptionHandler(ConstraintViolationException.class)
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
-    public ErrorMessage constraintViolationExceptionHandler(HttpClientErrorException exception, WebRequest request) {
+    public ErrorMessage constraintViolationExceptionHandler(ConstraintViolationException exception, WebRequest request) {
         return new ErrorMessage(
                 HttpStatus.BAD_REQUEST.value(),
                 new Date(),
