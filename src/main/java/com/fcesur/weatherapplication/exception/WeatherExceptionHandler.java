@@ -35,5 +35,4 @@ public class WeatherExceptionHandler {
                 request.getDescription(false)
         );
     }
-
 }
